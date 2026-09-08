@@ -12,5 +12,13 @@ namespace osu.Framework.Audio.Track
         /// <param name="name">A name to identify the virtual track internally.</param>
         /// <returns>A new virtual track.</returns>
         Track GetVirtual(double length = double.PositiveInfinity, string name = "virtual");
+
+        /// <summary>
+        /// Retrieve a <see cref="Track"/> which mixed into the audio device.
+        /// </summary>
+        /// <param name="length">The length of the silent track.</param>
+        /// <param name="name">A name to identify the silent track internally.</param>
+        /// <returns>A new silent track.</returns>
+        Track GetSilent(double length, string name = "silent");
     }
 }
